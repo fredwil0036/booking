@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +16,17 @@
         android:theme="@style/Theme.3rdyear"
         tools:targetApi="31">
         <activity
+            android:name=".app_location"
+            android:exported="true" />
+        <activity
+            android:name=".Account"
+            android:exported="false" />
+        <activity
             android:name=".home"
             android:exported="true" />
+        <meta-data
+            android:name="com.google.android.ged.API_KEY"
+            android:value="AIzaSyAIZjQSYHL8sqoov0RRl2ND_m8xv1GetY4"/>
     </application>
 
 </manifest>
